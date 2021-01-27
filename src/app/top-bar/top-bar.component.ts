@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { myUsersArr } from '../lsit-users/list-users.component';
 
 @Component({
   selector: 'app-top-bar',

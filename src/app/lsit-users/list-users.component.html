@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<table>
+  <thead>
+    <tr>
+      <th>{{textConstans.nameColumn}}</th>
+      <th>{{textConstans.userStatusColumn}}</th>
+      <th>{{textConstans.paymentStatusColumn}}</th>
+      <th class="amount-head">{{textConstans.amountColumn}}</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of arrUsers">
+      <td>
+        <p class="full-name-container">{{user.firstName + user.lastName}}</p>
+        <p class="email-container">{{user.email}}</p>
+      </td>
+      <td>
+        <p [class]="user.userStatus ? 'Active' + '-user-status' : 'Inactive' + '-user-status'">
+          <span class="material-icons point-to-user-status">brightness_1</span>
+          {{user.userStatus ? 'Active' : 'Inactive'}}
+        </p>
+        <p class="last-login">{{user.lastLogin}}</p>
+      </td>
+      <td>
+        <p [class]="user.payment.status + '-payment-status'">
+          <span class="material-icons point-to-user-status">brightness_1</span>
+          {{user.payment.status}}
+        </p>
+        <p class="date-paid">{{user.payment.prefixToDate + user.date}}</p>
+      </td>
+      <td>
+        <p class="amount-count">{{textConstans.usdIcon + user.amount}}</p>
+        <p class="amount-text-currency">{{textConstans.usdText}}</p>
+      </td>
+      <td class="view-more-container">
+        <p class="view-more-text">{{textConstans.viewMore}}</p>
+        <span class="material-icons view-more-btn">more_vert</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
