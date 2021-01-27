@@ -37,6 +37,7 @@ interface myUser {
   date: string,
   amount: number,
   id: number,
+  visability: boolean,
 }
 
 export const myUsersArr: myUser[] = [{
@@ -49,6 +50,7 @@ export const myUsersArr: myUser[] = [{
   date: '15/APR/2020',
   amount: 200,
   id: 0,
+  visability: true,
   },
   {
     firstName: 'Anika',
@@ -60,6 +62,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 300,
     id: 1,
+    visability: true,
   },
   {
     firstName: 'Miracle',
@@ -71,6 +74,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 250,
     id: 2,
+    visability: true,
   },
   {
     firstName: 'Mira',
@@ -82,6 +86,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 200,
     id: 3,
+    visability: true,
   },
   {
     firstName: 'Erin',
@@ -93,6 +98,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 200,
     id: 4,
+    visability: true,
   },
   {
     firstName: 'Jaxson',
@@ -104,6 +110,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 750,
     id: 5,
+    visability: true,
   },
   {
     firstName: 'Mira',
@@ -115,6 +122,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 200,
     id: 6,
+    visability: true,
   },
   {
     firstName: 'Lincoln',
@@ -126,6 +134,7 @@ export const myUsersArr: myUser[] = [{
     date: '15/APR/2020',
     amount: 370,
     id: 7,
+    visability: true,
   }];
 
 

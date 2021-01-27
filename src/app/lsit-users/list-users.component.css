@@ -166,3 +166,12 @@ p {
   cursor: pointer;
   color: #6D5BD0;
 }
+
+
+.visability-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
