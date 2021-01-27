@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~material-design-icons/iconfont/material-icons.css";
+body {
+  font-family: "interFont", sans-serif;
+  background: #F2F0F9;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "interFont";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+  font-style: normal;
+  font-weight: normal;
+}
+
