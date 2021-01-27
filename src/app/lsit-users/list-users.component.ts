@@ -150,6 +150,7 @@ export class listUsersComponent implements OnInit {
 
   constructor() {
   }
+
   ngOnInit() {
   }
 }

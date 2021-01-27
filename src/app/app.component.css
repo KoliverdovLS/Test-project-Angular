@@ -20,3 +20,11 @@ app-top-bar {
   justify-content: space-between;
   align-items: center;
 }
+
+app-total-payable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}

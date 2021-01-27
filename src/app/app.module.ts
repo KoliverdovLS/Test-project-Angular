@@ -4,12 +4,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { listUsersComponent} from './lsit-users/list-users.component';
+import { TotalPayableComponent } from './total-payable/total-payable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    listUsersComponent
+    listUsersComponent,
+    TotalPayableComponent,
   ],
   imports: [
     BrowserModule,
