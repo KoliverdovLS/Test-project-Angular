@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {myUsersArr} from '../lsit-users/list-users.component';
 
 @Component({
@@ -9,7 +9,7 @@ import {myUsersArr} from '../lsit-users/list-users.component';
 
 export class TotalPayableComponent implements OnInit {
   textTotalPayed = 'Total payed: '
-  arrUsers = myUsersArr;
+  @Input() myUserArr;
   constructor() {
   }
   getSum() {
