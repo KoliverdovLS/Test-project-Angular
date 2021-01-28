@@ -9,33 +9,35 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of arrUsers">
-        <td *ngIf="user.visability">
-          <p class="full-name-container">{{user.firstName + user.lastName}}</p>
-          <p class="email-container">{{user.email}}</p>
-        </td>
-        <td *ngIf="user.visability">
-          <p [class]="user.userStatus ? 'Active' + '-user-status' : 'Inactive' + '-user-status'">
-            <span class="material-icons point-to-user-status">brightness_1</span>
-            {{user.userStatus ? 'Active' : 'Inactive'}}
-          </p>
-          <p class="last-login">{{user.lastLogin}}</p>
-        </td>
-        <td *ngIf="user.visability">
-          <p [class]="user.payment.status + '-payment-status'">
-            <span class="material-icons point-to-user-status">brightness_1</span>
-            {{user.payment.status}}
-          </p>
-          <p class="date-paid">{{user.payment.prefixToDate + user.date}}</p>
-        </td>
-        <td *ngIf="user.visability">
-          <p class="amount-count">{{textConstans.usdIcon + user.amount}}</p>
-          <p class="amount-text-currency">{{textConstans.usdText}}</p>
-        </td>
-        <td class="view-more-container" *ngIf="user.visability">
-          <p class="view-more-text">{{textConstans.viewMore}}</p>
-          <span class="material-icons view-more-btn">more_vert</span>
-        </td>
+  <ng-container *ngFor="let user of arrUsers">
+    <tr *ngIf="user.visability">
+      <td>
+        <p class="full-name-container">{{user.firstName + user.lastName}}</p>
+        <p class="email-container">{{user.email}}</p>
+      </td>
+      <td>
+        <p [class]="user.userStatus ? 'Active' + '-user-status' : 'Inactive' + '-user-status'">
+          <span class="material-icons point-to-user-status">brightness_1</span>
+          {{user.userStatus ? 'Active' : 'Inactive'}}
+        </p>
+        <p class="last-login">{{user.lastLogin}}</p>
+      </td>
+      <td>
+        <p [class]="user.payment.status + '-payment-status'">
+          <span class="material-icons point-to-user-status">brightness_1</span>
+          {{user.payment.status}}
+        </p>
+        <p class="date-paid">{{user.payment.prefixToDate + user.date}}</p>
+      </td>
+      <td>
+        <p class="amount-count">{{textConstans.usdIcon + user.amount}}</p>
+        <p class="amount-text-currency">{{textConstans.usdText}}</p>
+      </td>
+      <td class="view-more-container">
+        <p class="view-more-text">{{textConstans.viewMore}}</p>
+        <span class="material-icons view-more-btn">more_vert</span>
+      </td>
     </tr>
+  </ng-container>
   </tbody>
 </table>
