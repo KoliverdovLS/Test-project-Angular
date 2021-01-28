@@ -10,7 +10,7 @@
   </thead>
   <tbody>
   <ng-container *ngFor="let user of arrUsers">
-    <tr *ngIf="user.visability">
+    <tr [class.un-visible]="!user.visability">
       <td>
         <p class="full-name-container">{{user.firstName + user.lastName}}</p>
         <p class="email-container">{{user.email}}</p>
