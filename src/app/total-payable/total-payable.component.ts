@@ -14,7 +14,7 @@ export class TotalPayableComponent implements OnInit {
   }
   getSum() {
     return  myUsersArr.reduce((acc, curr) => {
-      if (curr.payment['status'] === 'Paid' && curr.visability) {
+      if (curr.payment.status === 'Paid' && curr.visability) {
         return acc + curr.amount;
       }
       return acc;
