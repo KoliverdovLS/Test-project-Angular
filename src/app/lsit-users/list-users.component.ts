@@ -12,6 +12,12 @@ let textConstans = {
 
 }
 
+
+type PayStatus =
+{
+  status: string,
+  prefixToDate: string,
+}
 let paymentStatuses = {
   paid: {
     status: 'Paid',
@@ -27,20 +33,20 @@ let paymentStatuses = {
   }
 }
 
-interface myUser {
+interface MyUser {
   firstName: string,
   lastName: string,
   email: string,
   userStatus: boolean,
   lastLogin: string,
-  payment: object,
+  payment: PayStatus,
   date: string,
   amount: number,
   id: number,
   visability: boolean,
 }
 
-export const myUsersArr: myUser[] = [{
+export const myUsersArr: MyUser[] = [{
   firstName: 'Justin',
   lastName: ' Septimus',
   email: 'example@email.com',
